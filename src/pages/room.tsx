@@ -5,13 +5,13 @@ import { QuestionItem } from "@/components/question-item";
 import { Button } from "@/components/ui/button";
 
 type RoomParams = {
-  id: string;
+  roomId: string;
 };
 
 export function Room() {
   const params = useParams<RoomParams>();
 
-  if (!params.id) {
+  if (!params.roomId) {
     return <Navigate replace to="/" />;
   }
 
